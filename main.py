@@ -34,7 +34,7 @@ async def run_haskell_command(data: dict):
             stderr_output = remove_trailing_newline(stderr)
             process.kill()
             return {"output": stdout_output,
-                    "stderr": stderr_output
+                    "error": stderr_output
                     }
         # return {"status": "success", "processed_message": message.upper()}
     except Exception as e:
